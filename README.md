@@ -2,8 +2,6 @@
 
 A price-volume-mix margin bridge, plus price elasticity estimated against the confounder, so the pricing recommendation does not come out backwards.
 
-[![ci](https://github.com/SlateGitOrg/marginbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/SlateGitOrg/marginbridge/actions/workflows/ci.yml)
-
 ## Why
 
 In an industrial distributor, sales reps have discount authority, and "margin is down" is usually one number hiding several unrelated problems: genuine price erosion, a shift toward lower-margin product lines, and one region that discounts far harder than the rest. Each needs a different response. On top of that, discounts in observational sales data are not random: reps give them to accounts that are already shrinking. A naive regression of volume on price therefore picks up that confounder instead of the causal effect, and recommends price cuts to chase volume that was never price-driven.
@@ -42,7 +40,7 @@ flowchart LR
 Requires Python 3.11+. No dependencies.
 
 ```bash
-git clone https://github.com/SlateGitOrg/marginbridge.git
+git clone https://github.com/shettysakshith-dotcom/marginbridge.git
 cd marginbridge
 python -m unittest discover -s tests -v   # run the test suite
 python -m src.demo                        # print the bridge, elasticity and regional report
@@ -122,10 +120,3 @@ docs/
 ## License
 
 MIT - see [LICENSE](LICENSE).
-
-## Maintainer
-
-Maintained by Dev Bhatt, a data analyst with 6+ years of professional experience building automated pipelines, controls and dashboards. His work includes risk indicator tracking and reconciliation, analytics automation, and reporting solutions.
-
-- Email: [devbhattwork27@gmail.com](mailto:devbhattwork27@gmail.com)
-- LinkedIn: [linkedin.com/in/dev-bhatt27](https://linkedin.com/in/dev-bhatt27)
